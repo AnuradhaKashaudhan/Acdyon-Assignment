@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Check, Mail, Sparkles, ArrowRight, Shield, X, AlertCircle } from 'lucide-react';
+import AnimatedCounter from '@/components/AnimatedCounter';
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -41,7 +42,6 @@ export default function CTASection() {
 
   return (
     <section id="cta" aria-label="Join Waitlist Section" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative overflow-hidden">
-      {/* Dynamic Screen Reader Live Region for Toast Alerts */}
       <div aria-live="polite" aria-atomic="true" className="sr-only">
         {toast?.message}
       </div>
@@ -86,7 +86,7 @@ export default function CTASection() {
           </div>
 
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4 leading-tight">
-            Join 10K+ gig workers tracking smarter
+            Join <AnimatedCounter end={10000} format="k" duration={2} /> gig workers tracking smarter
           </h2>
 
           <p className="text-blue-100 text-base sm:text-lg mb-10 max-w-xl mx-auto font-normal">
@@ -95,7 +95,6 @@ export default function CTASection() {
 
           <form onSubmit={handleSubmit} className="max-w-md mx-auto relative">
             <div className="flex flex-col sm:flex-row items-center gap-3">
-              {/* Accessible Form Input linked via htmlFor and aria-invalid */}
               <div className="relative w-full text-left">
                 <label htmlFor="cta-email-input" className="sr-only">
                   Email Address
@@ -133,7 +132,6 @@ export default function CTASection() {
                 )}
               </div>
 
-              {/* Accessible Action Button */}
               <motion.button
                 type="submit"
                 disabled={!isValidEmail || status !== 'idle'}
