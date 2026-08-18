@@ -1,28 +1,19 @@
-<div align="center">
+# EarningsHub 🚀
 
-  <h1>EarningsHub 🚀</h1>
-  <p><b>Real-Time Earnings Tracking & Interactive Projection Calculator for India's Gig Workforce</b></p>
-  
-  <p>
-    <a href="https://nextjs.org/"><img src="https://img.shields.io/badge/Next.js-14.2.0-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js"/></a>
-    <a href="https://react.dev/"><img src="https://img.shields.io/badge/React-18.3.0-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React"/></a>
-    <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/></a>
-    <a href="https://tailwindcss.com/"><img src="https://img.shields.io/badge/Tailwind_CSS-3.4.0-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS"/></a>
-    <a href="https://www.framer.com/motion/"><img src="https://img.shields.io/badge/Framer_Motion-11.0-0055FF?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion"/></a>
-  </p>
+### Real-Time Earnings Tracking & Interactive Projection Calculator for India's Gig Economy
 
-  <p>
-    <a href="ACCESSIBILITY_CHECKLIST.md"><img src="https://img.shields.io/badge/WCAG_2.1-AA_Compliant-10B981?style=for-the-badge&logo=w3c&logoColor=white" alt="WCAG AA"/></a>
-    <a href="PERFORMANCE_GUIDE.md"><img src="https://img.shields.io/badge/Lighthouse-92_Score-2563EB?style=for-the-badge&logo=lighthouse&logoColor=white" alt="Lighthouse"/></a>
-    <a href="VERIFICATION_REPORT.txt"><img src="https://img.shields.io/badge/Easter_Egg-Konami_Passed-8B5CF6?style=for-the-badge&logo=gamepad&logoColor=white" alt="Easter Egg"/></a>
-  </p>
+[![Next.js](https://img.shields.io/badge/Next.js-14.2-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-18.3-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 
-  <blockquote>
-    <b>Know your money. Every rupee, every day.</b><br/>
-    Tailored for Swiggy, Zomato, Uber, Rapido, Urban Company & Freelancers across India.
-  </blockquote>
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-11.0-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
+[![WCAG 2.1 AA](https://img.shields.io/badge/WCAG_2.1-AA_Passed-10B981?style=for-the-badge&logo=w3c&logoColor=white)](ACCESSIBILITY_CHECKLIST.md)
+[![Lighthouse Score](https://img.shields.io/badge/Lighthouse-92_Score-2563EB?style=for-the-badge&logo=lighthouse&logoColor=white)](PERFORMANCE_GUIDE.md)
+[![Easter Egg](https://img.shields.io/badge/Easter_Egg-Konami_Passed-8B5CF6?style=for-the-badge&logo=gamepad&logoColor=white)](VERIFICATION_REPORT.txt)
 
-</div>
+> **Know your money. Every rupee, every day.**  
+> Tailored for Swiggy, Zomato, Uber, Rapido, Urban Company & Freelancers across India.
 
 ---
 
@@ -121,6 +112,4 @@ ACDYON/
 
 ---
 
-<div align="center">
-  <sub>Built with ❤️ for Indian Gig Workers by <a href="https://github.com/AnuradhaKashaudhan">Anuradha Kashaudhan</a></sub>
-</div>
+Built with ❤️ for Indian Gig Workers by [Anuradha Kashaudhan](https://github.com/AnuradhaKashaudhan)
