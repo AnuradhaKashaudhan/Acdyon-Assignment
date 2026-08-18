@@ -74,23 +74,24 @@ export default function CTASection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-50px' }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
-        className="relative rounded-3xl p-8 sm:p-14 md:p-16 bg-gradient-to-r from-blue-600 via-indigo-600 to-emerald-600 text-white shadow-2xl overflow-hidden border border-blue-400/30"
+        className="relative rounded-3xl p-8 sm:p-14 md:p-16 bg-gradient-to-r from-blue-600 via-indigo-600 to-emerald-600 dark:from-amber-600 dark:via-orange-600 dark:to-red-600 text-white shadow-2xl overflow-hidden border border-blue-400/30 dark:border-amber-500/30"
       >
-        <div className="absolute -right-20 -top-20 w-96 h-96 border-4 border-white/10 rounded-full pointer-events-none animate-spin-slow" aria-hidden="true" />
-        <div className="absolute -left-20 -bottom-20 w-80 h-80 border-4 border-emerald-400/20 rounded-full pointer-events-none animate-pulse-subtle" aria-hidden="true" />
-
+        {/* SVG Pattern Background Texture */}
+        <div className="absolute inset-0 pointer-events-none opacity-15 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]" aria-hidden="true" />
+        
         <div className="relative z-10 max-w-3xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold bg-white/15 backdrop-blur-md border border-white/20 mb-6 text-white">
             <Sparkles className="w-3.5 h-3.5 text-amber-300" aria-hidden="true" />
             Limited Early Access Slots Remaining
           </div>
 
+          {/* Headline with Gold Accent Counter */}
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4 leading-tight">
-            Join <AnimatedCounter end={10000} format="k" duration={2} /> gig workers tracking smarter
+            Join <AnimatedCounter end={10000} format="k" duration={2} className="text-amber-300 dark:text-amber-200" /> gig workers tracking smarter
           </h2>
 
-          <p className="text-blue-100 text-base sm:text-lg mb-10 max-w-xl mx-auto font-normal">
-            Take total control of your earnings today. Get priority access to real-time sync, automated expense logging, and instant payouts.
+          <p className="text-blue-100 dark:text-orange-100 text-base sm:text-lg mb-10 max-w-xl mx-auto font-normal">
+            Take total control of your earnings today. Get priority access to real-time sync, automated expense logging, and instant daily payouts.
           </p>
 
           <form onSubmit={handleSubmit} className="max-w-md mx-auto relative">
@@ -132,6 +133,7 @@ export default function CTASection() {
                 )}
               </div>
 
+              {/* HUGE PROMINENT BUTTON WITH ANIMATED HOVER ARROW */}
               <motion.button
                 type="submit"
                 disabled={!isValidEmail || status !== 'idle'}
@@ -139,11 +141,11 @@ export default function CTASection() {
                 whileHover={isValidEmail && status === 'idle' ? { scale: 1.05 } : {}}
                 whileTap={isValidEmail && status === 'idle' ? { scale: 0.95 } : {}}
                 transition={{ type: 'spring', stiffness: 400, damping: 25 }}
-                className={`w-full sm:w-auto px-7 py-4 rounded-2xl font-bold text-sm sm:text-base whitespace-nowrap transition-all duration-300 flex items-center justify-center gap-2 shadow-xl min-h-[44px] ${
+                className={`group w-full sm:w-auto px-8 py-4 rounded-2xl font-black text-base sm:text-lg whitespace-nowrap transition-all duration-300 flex items-center justify-center gap-2 shadow-2xl min-h-[52px] ${
                   status === 'success'
                     ? 'bg-emerald-500 text-slate-950 shadow-emerald-500/30'
                     : isValidEmail && status === 'idle'
-                    ? 'bg-slate-950 hover:bg-slate-900 text-white hover:text-emerald-300 shadow-slate-950/40 shadow-emerald-500/20 hover:shadow-emerald-500/30'
+                    ? 'bg-slate-950 hover:bg-slate-900 text-white hover:text-amber-300 shadow-slate-950/40 shadow-emerald-500/20'
                     : 'bg-slate-800/80 text-slate-400 cursor-not-allowed border border-white/10'
                 }`}
               >
@@ -176,8 +178,8 @@ export default function CTASection() {
                       animate={{ opacity: 1 }}
                       className="flex items-center gap-2"
                     >
-                      Get Early Access
-                      <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                      Start Tracking Now
+                      <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-2" aria-hidden="true" />
                     </motion.span>
                   )}
                 </AnimatePresence>
@@ -185,9 +187,9 @@ export default function CTASection() {
             </div>
           </form>
 
-          <div className="mt-8 flex items-center justify-center gap-4 text-xs text-blue-100/80">
+          <div className="mt-8 flex items-center justify-center gap-4 text-xs text-blue-100/80 dark:text-orange-100/80">
             <span className="flex items-center gap-1">
-              <Shield className="w-3.5 h-3.5 text-emerald-300" aria-hidden="true" />
+              <Shield className="w-3.5 h-3.5 text-amber-300" aria-hidden="true" />
               No spam guaranteed
             </span>
             <span>•</span>

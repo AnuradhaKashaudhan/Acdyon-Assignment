@@ -1,193 +1,119 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { ArrowRight, ShieldCheck, Zap, Sparkles, Award } from 'lucide-react';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, ShieldCheck, Zap, TrendingUp } from 'lucide-react';
+import DashboardMockup from './DashboardMockup';
 
 export default function Hero() {
-  const headlineText = "Know your money. Every rupee, every day.";
-  const subheadingText = "Real-time earnings tracking for Swiggy, Zomato, Uber, Rapido, and freelancers. Instant bank transfers, smart income predictions, and zero hidden platform fees.";
-
-  // Framer Motion useScroll hook for Desktop Parallax (0.5x speed)
-  const { scrollY } = useScroll();
-  const yParallax = useTransform(scrollY, [0, 800], [0, 400]);
-
-  const [isDesktop, setIsDesktop] = useState(false);
-
-  useEffect(() => {
-    const checkDesktop = () => {
-      setIsDesktop(window.innerWidth >= 1024);
-    };
-    checkDesktop();
-    window.addEventListener('resize', checkDesktop);
-    return () => window.removeEventListener('resize', checkDesktop);
-  }, []);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.15, delayChildren: 0.2 },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: [0.215, 0.61, 0.355, 1.0] },
-    },
-  };
-
-  const letterContainerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.008, delayChildren: 0.6 },
-    },
-  };
-
-  const letterChildVariants = {
-    hidden: { opacity: 0, y: 6 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.12 } },
-  };
-
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-24 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      {/* GPU-accelerated Parallax Background (0.5x scroll speed on desktop) */}
-      <motion.div
-        style={{ y: isDesktop ? yParallax : 0 }}
-        className="absolute inset-0 bg-gradient-to-br from-blue-50/70 via-indigo-50/40 to-emerald-50/50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-900 transition-colors duration-500 pointer-events-none"
-      />
+    <section className="relative pt-28 pb-20 lg:pt-36 lg:pb-32 overflow-hidden bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
+      {/* Texture: Subtle SVG Grain Noise & Background Gradient Meshes */}
+      <div className="absolute inset-0 pointer-events-none opacity-[0.03] dark:opacity-[0.05] bg-[radial-gradient(#000_1px,transparent_1px)] dark:bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]" aria-hidden="true" />
+      
+      <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-gradient-to-tr from-emerald-400/30 via-blue-500/20 to-purple-600/30 rounded-full blur-3xl pointer-events-none -z-10 animate-pulse-slow" aria-hidden="true" />
+      <div className="absolute bottom-10 left-10 w-96 h-96 bg-amber-400/20 dark:bg-amber-500/10 rounded-full blur-3xl pointer-events-none -z-10" aria-hidden="true" />
 
-      {/* Background Parallax Gradient Orbs */}
-      <motion.div
-        style={{ y: isDesktop ? yParallax : 0 }}
-        className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-blue-500/20 via-indigo-500/10 to-emerald-500/20 blur-[120px] rounded-full pointer-events-none animate-pulse-subtle"
-      />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          {/* LEFT-ALIGNED ASYMMETRIC CONTENT BLOCK */}
+          <div className="lg:col-span-7 text-left space-y-8">
+            
+            {/* Asymmetric Badge */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, ease: 'easeOut' }}
+              className="inline-flex items-center gap-2.5 px-4 py-2 rounded-2xl bg-emerald-500/10 dark:bg-emerald-400/15 border border-emerald-500/30 text-emerald-700 dark:text-emerald-300 text-xs sm:text-sm font-bold tracking-wide shadow-sm"
+            >
+              <span className="flex h-2.5 w-2.5 relative">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
+              </span>
+              Actually Synced 24/7 Across Swiggy, Uber & Zomato
+            </motion.div>
 
-      {/* Floating Geometric Shapes */}
-      <motion.div
-        animate={{ rotate: 360 }}
-        transition={{ duration: 35, repeat: Infinity, ease: 'linear' }}
-        className="absolute top-20 right-10 md:right-24 w-40 h-40 border border-blue-500/20 dark:border-blue-400/20 rounded-3xl pointer-events-none hidden sm:block"
-      />
-      <motion.div
-        animate={{ rotate: -360 }}
-        transition={{ duration: 45, repeat: Infinity, ease: 'linear' }}
-        className="absolute bottom-24 left-10 md:left-20 w-56 h-56 border border-emerald-500/20 dark:border-emerald-400/20 rounded-full pointer-events-none hidden sm:block"
-      />
+            {/* SPLIT TYPOGRAPHY HEADLINE */}
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.1, ease: 'easeOut' }}
+              className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.08]"
+            >
+              Know your money. <br />
+              <span className="text-emerald-500 dark:text-emerald-400 font-black">
+                Every rupee, every day.
+              </span>
+            </motion.h1>
 
-      {/* Floating Decorative Badges */}
-      <motion.div
-        animate={{ y: [-10, 10, -10] }}
-        transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-        className="absolute top-36 left-[8%] hidden lg:flex items-center gap-3 px-4 py-2.5 rounded-2xl bg-white/90 dark:bg-slate-800/90 shadow-xl shadow-blue-950/5 border border-slate-200/60 dark:border-slate-700/60 backdrop-blur-md"
-      >
-        <div className="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-sm">
-          ₹
-        </div>
-        <div>
-          <p className="text-xs text-slate-500 dark:text-slate-400">Payout Sent</p>
-          <p className="text-sm font-bold text-slate-900 dark:text-slate-100">₹850 Instant Transfer</p>
-        </div>
-      </motion.div>
+            {/* Human Intentional Micro-Copy */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2, ease: 'easeOut' }}
+              className="text-slate-600 dark:text-slate-300 text-lg sm:text-xl font-normal leading-relaxed max-w-xl"
+            >
+              Stop guessing your daily payouts. Track delivery shifts, ride-share tips, and freelance milestones in one unified, real-time dashboard. <strong className="text-amber-500 font-bold">Get paid TODAY</strong> with zero platform deduction.
+            </motion.p>
 
-      <motion.div
-        animate={{ y: [10, -10, 10] }}
-        transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-        className="absolute bottom-32 right-[8%] hidden lg:flex items-center gap-3 px-4 py-2.5 rounded-2xl bg-white/90 dark:bg-slate-800/90 shadow-xl shadow-blue-950/5 border border-slate-200/60 dark:border-slate-700/60 backdrop-blur-md"
-      >
-        <div className="w-8 h-8 rounded-lg bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center">
-          <Zap className="w-4 h-4" />
-        </div>
-        <div>
-          <p className="text-xs text-slate-500 dark:text-slate-400">Sync Speed</p>
-          <p className="text-sm font-bold text-slate-900 dark:text-slate-100">&lt; 1 sec Realtime</p>
-        </div>
-      </motion.div>
+            {/* PROMINENT HUGE CTA BUTTONS */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.3, ease: 'easeOut' }}
+              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2"
+            >
+              <a
+                href="#cta"
+                className="group inline-flex items-center justify-center gap-3 px-8 py-5 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-lg sm:text-xl shadow-xl shadow-emerald-600/30 hover:shadow-emerald-500/50 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0"
+              >
+                <span>Start Tracking Now</span>
+                <ArrowRight className="w-6 h-6 transition-transform duration-300 group-hover:translate-x-2" />
+              </a>
 
-      {/* Main Content Container */}
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        className="relative max-w-4xl mx-auto text-center z-10 flex flex-col items-center"
-      >
-        <motion.div variants={itemVariants} className="mb-6">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs sm:text-sm font-medium bg-blue-500/10 text-blue-700 dark:bg-blue-500/20 dark:text-blue-300 border border-blue-500/20 backdrop-blur-sm">
-            <Sparkles className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 animate-spin-slow" />
-            Designed for 100,000+ Indian Gig Workers
-          </span>
-        </motion.div>
+              <a
+                href="#dashboard"
+                className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 border-2 border-slate-200 dark:border-slate-800 font-bold text-base hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-300"
+              >
+                <TrendingUp className="w-5 h-5 text-amber-500" />
+                View Demo Dashboard
+              </a>
+            </motion.div>
 
-        <motion.h1
-          variants={itemVariants}
-          className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-[1.15] mb-6"
-        >
-          Know your money.{' '}
-          <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-emerald-500 dark:from-blue-400 dark:via-indigo-400 dark:to-emerald-400 bg-clip-text text-transparent">
-            Every rupee, every day.
-          </span>
-        </motion.h1>
-
-        <motion.div
-          variants={letterContainerVariants}
-          initial="hidden"
-          animate="visible"
-          className="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed font-normal min-h-[4rem]"
-        >
-          {subheadingText.split('').map((char, index) => (
-            <motion.span key={index} variants={letterChildVariants} className="inline-block whitespace-pre">
-              {char}
-            </motion.span>
-          ))}
-        </motion.div>
-
-        <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
-          <motion.a
-            href="#cta"
-            whileHover={{ scale: 1.05, boxShadow: '0 20px 30px -10px rgba(37, 99, 235, 0.4)' }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ type: 'spring', stiffness: 400, damping: 25 }}
-            className="w-full sm:w-auto px-8 py-4 text-base font-bold rounded-2xl text-white bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-600 shadow-xl shadow-blue-600/30 flex items-center justify-center gap-3 group relative overflow-hidden"
-          >
-            <span className="relative z-10 flex items-center gap-2">
-              Start Tracking Now
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          </motion.a>
-
-          <motion.a
-            href="#dashboard"
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.97 }}
-            className="w-full sm:w-auto px-7 py-4 text-base font-semibold rounded-2xl text-slate-700 dark:text-slate-200 bg-white/80 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700/50 shadow-sm backdrop-blur-sm flex items-center justify-center gap-2"
-          >
-            View Live Demo
-          </motion.a>
-        </motion.div>
-
-        <motion.div
-          variants={itemVariants}
-          className="mt-14 pt-8 border-t border-slate-200/60 dark:border-slate-800/60 flex flex-wrap items-center justify-center gap-6 text-sm text-slate-500 dark:text-slate-400"
-        >
-          <div className="flex items-center gap-2">
-            <ShieldCheck className="w-4 h-4 text-emerald-500" />
-            <span>Bank-grade 256-bit Security</span>
+            {/* TRUST BADGES & GOLD ACCENT NUMBERS */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="pt-4 flex items-center gap-6 text-xs sm:text-sm font-semibold text-slate-500 dark:text-slate-400 border-t border-slate-200/80 dark:border-slate-800/80"
+            >
+              <div className="flex items-center gap-2">
+                <ShieldCheck className="w-4 h-4 text-emerald-500" />
+                <span>100% Free for Gig Workers</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Zap className="w-4 h-4 text-amber-500" />
+                <span>Avg Daily Shift: <strong className="text-amber-500 dark:text-amber-400 font-extrabold text-sm">₹850</strong></span>
+              </div>
+            </motion.div>
           </div>
-          <div className="flex items-center gap-2">
-            <Zap className="w-4 h-4 text-blue-500" />
-            <span>Instant Daily Withdrawals</span>
+
+          {/* RIGHT-SIDE DASHBOARD MOCKUP & GEOMETRIC SHAPE */}
+          <div className="lg:col-span-5 relative">
+            <div className="absolute -top-10 -left-10 w-40 h-40 bg-amber-400/20 rounded-full blur-xl pointer-events-none" />
+            <DashboardMockup />
           </div>
-          <div className="flex items-center gap-2">
-            <Award className="w-4 h-4 text-indigo-500" />
-            <span>4.9/5 Rating by Gig Workers</span>
-          </div>
-        </motion.div>
-      </motion.div>
+
+        </div>
+      </div>
+
+      {/* WAVY ORGANIC SECTION DIVIDER */}
+      <div className="absolute bottom-0 left-0 right-0 overflow-hidden leading-none pointer-events-none">
+        <svg className="relative block w-full h-12 text-white dark:text-slate-900" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.92,156.44,117.82,221,108.43Z" fill="currentColor"></path>
+        </svg>
+      </div>
     </section>
   );
 }
