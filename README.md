@@ -1,35 +1,21 @@
-<div align="center">
+# EarningsHub 🚀
+### Real-Time Earnings Tracking & Projection Calculator for India's Gig Economy
 
-  <!-- Animated Header Banner -->
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,10,20,30&height=220&section=header&text=EarningsHub%20🚀&fontSize=50&fontColor=fff&animation=twinkling&desc=Real-Time%20Earnings%20Tracking%20%26%20Calculator%20for%20Gig%20Workers&descSize=18&descAlignY=70" width="100%" alt="EarningsHub Banner"/>
-
-  <br/>
-
-  <!-- Animated Typing Subtitle -->
-  <a href="https://github.com/AnuradhaKashaudhan/Acdyon-Assignment">
-    <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=700&size=24&pause=1000&color=10B981&center=true&vCenter=true&width=700&lines=Know+your+money.+Every+rupee%2C+every+day.;Interactive+Earnings+Projection+Calculator;100%25+WCAG+2.1+AA+Accessible+%26+Lighthouse+90%2B;Try+the+Konami+Code+%E2%86%91+%E2%86%91+%E2%86%90+%E2%86%92+%E2%86%90+%E2%86%92+B+A" alt="Typing SVG" />
-  </a>
-
-  <br/><br/>
-
-  <!-- Badges -->
-  ![Next.js](https://img.shields.io/badge/Next.js%2014-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-  ![React](https://img.shields.io/badge/React%2018-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-  ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-  ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white)
-  ![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
-  ![WCAG AA](https://img.shields.io/badge/WCAG_2.1-AA_Passed-10B981?style=for-the-badge&logo=w3c&logoColor=white)
-  ![Lighthouse Score](https://img.shields.io/badge/Lighthouse-92_Performance-2563EB?style=for-the-badge&logo=lighthouse&logoColor=white)
-
-</div>
+[![Next.js](https://img.shields.io/badge/Next.js_14-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React_18-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
+[![WCAG 2.1 AA](https://img.shields.io/badge/WCAG_2.1-AA_Passed-10B981?style=for-the-badge&logo=w3c&logoColor=white)](ACCESSIBILITY_CHECKLIST.md)
+[![Lighthouse Score](https://img.shields.io/badge/Lighthouse-92_Performance-2563EB?style=for-the-badge&logo=lighthouse&logoColor=white)](PERFORMANCE_GUIDE.md)
 
 ---
 
 ## 🌟 Overview
 
-**EarningsHub** is a high-performance web application designed for India's 100,000+ gig workers (Swiggy, Zomato, Uber, Rapido, Urban Company, and freelancers).
+**EarningsHub** is a state-of-the-art web application tailored for India's 100,000+ gig economy workforce (Swiggy, Zomato, Uber, Rapido, Urban Company, and freelancers).
 
-It features an interactive **Earnings Projection Calculator**, real-time income aggregation previews, 3D flip scenario cards with mobile swipe gestures, scroll-linked animations, and full WCAG 2.1 AA accessibility compliance.
+It features an **Interactive Earnings Projection Calculator**, real-time income aggregation previews, 3D flip scenario cards with mobile swipe gestures, scroll-linked animations, and full WCAG 2.1 AA accessibility compliance.
 
 ---
 
@@ -108,6 +94,4 @@ ACDYON/
 
 ---
 
-<div align="center">
-  <sub>Built with ❤️ for Indian Gig Workers by <a href="https://github.com/AnuradhaKashaudhan">Anuradha Kashaudhan</a></sub>
-</div>
+Built with ❤️ for Indian Gig Workers by [Anuradha Kashaudhan](https://github.com/AnuradhaKashaudhan)
