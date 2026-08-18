@@ -1,13 +1,13 @@
 <div align="center">
 
   <!-- Animated Header Banner -->
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,10,20,30&height=220&section=header&text=EarningsHub%20🚀&fontSize=50&fontColor=fff&animation=twinkling&desc=Real-Time%20Earnings%20Tracking%20for%20India's%20Gig%20Workers&descSize=20&descAlignY=70" width="100%" alt="EarningsHub Banner"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,10,20,30&height=220&section=header&text=EarningsHub%20🚀&fontSize=50&fontColor=fff&animation=twinkling&desc=Real-Time%20Earnings%20Tracking%20%26%20Calculator%20for%20Gig%20Workers&descSize=18&descAlignY=70" width="100%" alt="EarningsHub Banner"/>
 
   <br/>
 
   <!-- Animated Typing Subtitle -->
   <a href="https://github.com/AnuradhaKashaudhan/Acdyon-Assignment">
-    <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=700&size=24&pause=1000&color=10B981&center=true&vCenter=true&width=700&lines=Know+your+money.+Every+rupee%2C+every+day.;Built+for+Swiggy%2C+Zomato%2C+Uber%2C+Rapido+%26+Freelancers;100%25+WCAG+2.1+AA+Accessible+%26+Lighthouse+90%2B;Try+the+Konami+Code+%E2%86%91+%E2%86%91+%E2%86%90+%E2%86%92+%E2%86%90+%E2%86%92+B+A" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=700&size=24&pause=1000&color=10B981&center=true&vCenter=true&width=700&lines=Know+your+money.+Every+rupee%2C+every+day.;Interactive+Earnings+Projection+Calculator;100%25+WCAG+2.1+AA+Accessible+%26+Lighthouse+90%2B;Try+the+Konami+Code+%E2%86%91+%E2%86%91+%E2%86%90+%E2%86%92+%E2%86%90+%E2%86%92+B+A" alt="Typing SVG" />
   </a>
 
   <br/><br/>
@@ -19,7 +19,7 @@
   ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white)
   ![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
   ![WCAG AA](https://img.shields.io/badge/WCAG_2.1-AA_Passed-10B981?style=for-the-badge&logo=w3c&logoColor=white)
-  ![Lighthouse Score](https://img.shields.io/badge/Lighthouse-90%2B_Performance-2563EB?style=for-the-badge&logo=lighthouse&logoColor=white)
+  ![Lighthouse Score](https://img.shields.io/badge/Lighthouse-92_Performance-2563EB?style=for-the-badge&logo=lighthouse&logoColor=white)
 
 </div>
 
@@ -27,81 +27,46 @@
 
 ## 🌟 Overview
 
-**EarningsHub** is a state-of-the-art, high-performance web application tailored for India's 100,000+ gig economy workforce (Swiggy, Zomato, Uber, Rapido, Urban Company, and freelancers).
+**EarningsHub** is a high-performance web application designed for India's 100,000+ gig workers (Swiggy, Zomato, Uber, Rapido, Urban Company, and freelancers).
 
-It aggregates real-time daily earnings, provides automated expense tracking, visualizes 30-day income growth, and supports instant UPI payouts.
-
----
-
-## ✨ Key Features
-
-- ⚡ **Real-Time Income Aggregation**: Live sync simulation across 15+ gig worker platforms.
-- 📈 **30-Day Growth Analytics**: Interactive SVG chart highlighting peak weekend earnings surges with custom tooltips.
-- 🔄 **3D Interactive Flip Cards**: Career scenarios detailing role-specific potential (Delivery, Ride-Share, Freelance, Content Creation).
-- 🌓 **Sleek Light & Dark Mode**: Persistent theme switching powered by Tailwind CSS & CSS custom variables.
-- ✉️ **Real-Time Email Capture**: Form validation with dynamic border feedback, loading states, and toast notifications.
-- 🎮 **Secret Konami Code Easter Egg**: Trigger full-screen celebratory modal by entering `↑ ↑ ↓ ↓ ← → ← → B A`.
-- 📜 **Scroll-Linked Animations**: Desktop background parallax (`0.5x` speed), section scroll reveals, and top spring progress bar.
+It features an interactive **Earnings Projection Calculator**, real-time income aggregation previews, 3D flip scenario cards with mobile swipe gestures, scroll-linked animations, and full WCAG 2.1 AA accessibility compliance.
 
 ---
 
-## 🎮 Easter Egg Trigger
+## ✨ Key Capabilities & Highlights
 
-Unlock **EarningsHub Pro** secret modal:
-
-```
-[↑] [↑] [↓] [↓] [←] [→] [←] [→] [B] [A]
-```
-
-- **Trigger**: Type the sequence on any keyable area (ignored inside input fields).
-- **Features**: Full-screen backdrop blur modal, spring scale animation, timestamp, auto-close after 3 seconds, and silent page refresh.
-
----
-
-## ♿ WCAG 2.1 AA Accessibility Standards
-
-- ♿ **Skip Navigation Link**: `Tab` to activate **"Skip to main content"** bypass block.
-- 🏷️ **Accessible Landmarks**: `<header>`, `<nav>`, `<main id="main-content">`, `<section aria-label="...">`, `<footer>`.
-- 📊 **Screen Reader Data Summaries**: Includes hidden data tables (`.sr-only`) for audio accessibility.
-- 🎯 **Focus Indicators**: High-contrast 2px focus ring (`*:focus-visible`).
-- ⚡ **Reduced Motion**: Full support for `@media (prefers-reduced-motion: reduce)`.
-
----
-
-## ⚡ Lighthouse 90+ Performance Optimization
-
-- 🚀 **Zero-CLS Font Preloading**: Self-hosted Inter font via `next/font/google` (`display: swap`).
-- 📦 **Minified Production Bundle**: Code splitting and SWC minification enabled.
-- 🖼️ **GPU-Accelerated Rendering**: Mutates only `opacity` and `transform` (`scale`, `translate`).
+- 📊 **Interactive Projection Calculator**: Calculate daily, weekly, monthly, and yearly income with platform presets, range sliders, input validation, and `localStorage` persistence.
+- 📱 **Mobile Touch Swipe Gestures**: Swipe left/right on 3D scenario cards (`>50px` threshold) with snap-back physics and haptic vibration feedback.
+- ⚡ **Scroll-Triggered Animated Counters**: Number count animation (`0` → `10K+`) triggering when scrolled into view.
+- 🎮 **Secret Konami Code Easter Egg**: Enter `↑ ↑ ↓ ↓ ← → ← → B A` to trigger a full-screen celebratory modal.
+- ♿ **100% WCAG 2.1 AA Compliant**: Bypass navigation skip links, ARIA landmarks, high-contrast focus rings (`*:focus-visible`), and screen-reader data summary tables.
+- 🚀 **Lighthouse 90+ Score**: Zero-CLS font preloading via `next/font/google`, SWC minification, and GPU-optimized animation profiling.
 
 ---
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- **Node.js**: v18.0.0 or higher
-- **npm**: v9.0.0 or higher
+- Node.js v18.0.0 or higher
+- npm v9.0.0 or higher
 
-### Installation & Local Setup
+### Setup & Local Execution
 
-1. **Clone the repository**:
+1. **Clone repository**:
    ```bash
    git clone https://github.com/AnuradhaKashaudhan/Acdyon-Assignment.git
    cd Acdyon-Assignment
    ```
-
 2. **Install dependencies**:
    ```bash
    npm install
    ```
-
-3. **Run the development server**:
+3. **Start development server**:
    ```bash
    npm run dev
    ```
-
 4. **Open in browser**:
-   Navigate to [http://localhost:3000](http://localhost:3000).
+   Navigate to `http://localhost:3000`.
 
 ---
 
@@ -111,29 +76,34 @@ Unlock **EarningsHub Pro** secret modal:
 ACDYON/
 ├── src/
 │   ├── app/
-│   │   ├── globals.css          # Core CSS tokens & accessibility rings
+│   │   ├── globals.css          # Core CSS tokens & accessibility focus rings
 │   │   ├── layout.tsx           # Root layout with font loader & skip link
-│   │   └── page.tsx             # Main landing page assembly
+│   │   └── page.tsx             # Landing page assembly
 │   ├── components/
-│   │   ├── Navbar.tsx           # Responsive header & theme toggle
-│   │   ├── Hero.tsx             # Parallax hero section
+│   │   ├── Navbar.tsx           # Header & theme toggle
+│   │   ├── Hero.tsx             # Left-aligned hero with gold accents
 │   │   ├── DashboardMockup.tsx  # Live stats feed
 │   │   ├── EarningsChart.tsx    # 30-day analytics chart & table
-│   │   ├── FeaturesGrid.tsx     # Cascade card grid
-│   │   ├── EarningScenarios.tsx # 3D flip card roles
+│   │   ├── FeaturesGrid.tsx     # Rich distinct color cards
+│   │   ├── EarningsCalculator.tsx # Interactive 50/50 calculator
+│   │   ├── EarningScenarios.tsx # 3D swipe flip cards
 │   │   ├── CTASection.tsx       # Validated email waitlist form
-│   │   ├── EasterEgg.tsx        # Konami code celebratory modal
-│   │   ├── ScrollProgressBar.tsx# Top scroll spring bar
-│   │   ├── SkipLink.tsx         # Accessibility skip block
+│   │   ├── EasterEgg.tsx        # Konami code modal
+│   │   ├── AnimatedCounter.tsx  # Scroll counter component
+│   │   ├── ScrollProgressBar.tsx# Top scroll progress bar
+│   │   ├── SkipLink.tsx         # Bypass skip navigation link
 │   │   └── Footer.tsx           # Footer landmark
 │   ├── context/
 │   │   └── ThemeContext.tsx     # Theme state provider
 │   └── hooks/
-│       └── useKonamiCode.ts     # Key sequence detection hook
-├── public/                      # Static assets
-├── next.config.mjs              # Production optimization config
-├── tailwind.config.ts           # Tailwind design tokens
-└── README.md                    # Project documentation
+│       ├── useEarningsCalculator.ts # Calculator math & localStorage hook
+│       ├── useCounterAnimation.ts   # Scroll counter animation hook
+│       └── useKonamiCode.ts         # Secret key sequence hook
+├── DECISIONS.md                 # Architecture & design decisions
+├── SUBMISSION_SUMMARY.md        # Executive submission overview
+├── PERFORMANCE_GUIDE.md         # Lighthouse testing guide
+├── ACCESSIBILITY_CHECKLIST.md   # WCAG 2.1 AA audit guide
+└── VERIFICATION_REPORT.txt      # QA test execution report
 ```
 
 ---
