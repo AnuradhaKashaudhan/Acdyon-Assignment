@@ -1,32 +1,59 @@
-# EarningsHub 🚀
-### Real-Time Earnings Tracking & Projection Calculator for India's Gig Economy
+<div align="center">
 
-[![Next.js](https://img.shields.io/badge/Next.js_14-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
-[![React](https://img.shields.io/badge/React_18-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
-[![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
-[![WCAG 2.1 AA](https://img.shields.io/badge/WCAG_2.1-AA_Passed-10B981?style=for-the-badge&logo=w3c&logoColor=white)](ACCESSIBILITY_CHECKLIST.md)
-[![Lighthouse Score](https://img.shields.io/badge/Lighthouse-92_Performance-2563EB?style=for-the-badge&logo=lighthouse&logoColor=white)](PERFORMANCE_GUIDE.md)
+  <h1>EarningsHub 🚀</h1>
+  <p><b>Real-Time Earnings Tracking & Interactive Projection Calculator for India's Gig Workforce</b></p>
+  
+  <p>
+    <a href="https://nextjs.org/"><img src="https://img.shields.io/badge/Next.js-14.2.0-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js"/></a>
+    <a href="https://react.dev/"><img src="https://img.shields.io/badge/React-18.3.0-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React"/></a>
+    <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/></a>
+    <a href="https://tailwindcss.com/"><img src="https://img.shields.io/badge/Tailwind_CSS-3.4.0-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS"/></a>
+    <a href="https://www.framer.com/motion/"><img src="https://img.shields.io/badge/Framer_Motion-11.0-0055FF?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion"/></a>
+  </p>
+
+  <p>
+    <a href="ACCESSIBILITY_CHECKLIST.md"><img src="https://img.shields.io/badge/WCAG_2.1-AA_Compliant-10B981?style=for-the-badge&logo=w3c&logoColor=white" alt="WCAG AA"/></a>
+    <a href="PERFORMANCE_GUIDE.md"><img src="https://img.shields.io/badge/Lighthouse-92_Score-2563EB?style=for-the-badge&logo=lighthouse&logoColor=white" alt="Lighthouse"/></a>
+    <a href="VERIFICATION_REPORT.txt"><img src="https://img.shields.io/badge/Easter_Egg-Konami_Passed-8B5CF6?style=for-the-badge&logo=gamepad&logoColor=white" alt="Easter Egg"/></a>
+  </p>
+
+  <blockquote>
+    <b>Know your money. Every rupee, every day.</b><br/>
+    Tailored for Swiggy, Zomato, Uber, Rapido, Urban Company & Freelancers across India.
+  </blockquote>
+
+</div>
 
 ---
 
 ## 🌟 Overview
 
-**EarningsHub** is a state-of-the-art web application tailored for India's 100,000+ gig economy workforce (Swiggy, Zomato, Uber, Rapido, Urban Company, and freelancers).
+**EarningsHub** is a state-of-the-art web application tailored for India's 100,000+ gig economy workforce. 
 
-It features an **Interactive Earnings Projection Calculator**, real-time income aggregation previews, 3D flip scenario cards with mobile swipe gestures, scroll-linked animations, and full WCAG 2.1 AA accessibility compliance.
+Instead of submitting a static UI mockup, EarningsHub features a fully stateful, interactive **Earnings Projection Calculator**, real-time income aggregation previews, 3D flip scenario cards with mobile swipe gestures, scroll-linked animations, and 100% WCAG 2.1 AA accessibility compliance.
 
 ---
 
-## ✨ Key Capabilities & Highlights
+## ✨ Key Capabilities & Features
 
-- 📊 **Interactive Projection Calculator**: Calculate daily, weekly, monthly, and yearly income with platform presets, range sliders, input validation, and `localStorage` persistence.
-- 📱 **Mobile Touch Swipe Gestures**: Swipe left/right on 3D scenario cards (`>50px` threshold) with snap-back physics and haptic vibration feedback.
+- 📊 **Interactive Projection Calculator**: Calculate daily, weekly, monthly, and yearly income with platform presets, range sliders, input validation, and `localStorage` state persistence.
+- 📱 **Mobile Touch Swipe Gestures**: Swipe left/right on 3D scenario cards (`>50px` threshold) with snap-back physics and haptic vibration feedback (`navigator.vibrate`).
 - ⚡ **Scroll-Triggered Animated Counters**: Number count animation (`0` → `10K+`) triggering when scrolled into view.
-- 🎮 **Secret Konami Code Easter Egg**: Enter `↑ ↑ ↓ ↓ ← → ← → B A` to trigger a full-screen celebratory modal.
+- 🎮 **Secret Konami Code Easter Egg**: Enter `↑ ↑ ↓ ↓ ← → ← → B A` to trigger a full-screen celebratory modal (`EasterEgg.tsx`).
 - ♿ **100% WCAG 2.1 AA Compliant**: Bypass navigation skip links, ARIA landmarks, high-contrast focus rings (`*:focus-visible`), and screen-reader data summary tables.
 - 🚀 **Lighthouse 90+ Score**: Zero-CLS font preloading via `next/font/google`, SWC minification, and GPU-optimized animation profiling.
+
+---
+
+## 📁 Key Submission Documents
+
+| Document | Description |
+| :--- | :--- |
+| 📑 [DECISIONS.md](DECISIONS.md) | Narrative detailing engineering decisions, time-limit trade-offs, AI tool usage, and follow-up pitch script. |
+| 📋 [SUBMISSION_SUMMARY.md](SUBMISSION_SUMMARY.md) | Executive submission summary report for Acdyon Technologies. |
+| 🧪 [VERIFICATION_REPORT.txt](VERIFICATION_REPORT.txt) | End-to-end QA verification report for the Konami Code Easter Egg. |
+| ♿ [ACCESSIBILITY_CHECKLIST.md](ACCESSIBILITY_CHECKLIST.md) | WCAG 2.1 AA compliance audit guide. |
+| ⚡ [PERFORMANCE_GUIDE.md](PERFORMANCE_GUIDE.md) | Lighthouse performance testing & optimization guide. |
 
 ---
 
@@ -94,4 +121,6 @@ ACDYON/
 
 ---
 
-Built with ❤️ for Indian Gig Workers by [Anuradha Kashaudhan](https://github.com/AnuradhaKashaudhan)
+<div align="center">
+  <sub>Built with ❤️ for Indian Gig Workers by <a href="https://github.com/AnuradhaKashaudhan">Anuradha Kashaudhan</a></sub>
+</div>
