@@ -37,6 +37,7 @@ I utilized **Antigravity AI** to accelerate boilerplate creation, initial Tailwi
 ### What I Personally Verified, Refactored, and Authored:
 * **Realistic Industry Benchmarks**: Replaced generic placeholder numbers with accurate Indian gig worker economics (e.g., ₹18,000/mo delivery driver, ₹25,000/mo freelancer, dinner surge hours).
 * **Copywriting & Tone**: Wrote all headlines and subtext from scratch (*"Know your money. Every rupee, every day."*).
+* **Interactive Earnings Calculator**: Built a custom projection tool (`useEarningsCalculator.ts` / `EarningsCalculator.tsx`) supporting platform presets (Swiggy/Zomato, Upwork/Fiverr, Uber/Rapido), range sliders, input validation, benchmark comparisons, and `localStorage` persistence.
 * **Gesture & Animation Mechanics**: Built custom touch drag gestures for 3D scenario cards (`EarningScenarios.tsx`) with >50px swipe threshold and haptic vibration feedback (`navigator.vibrate`), plus a reusable viewport counter animation (`useCounterAnimation.ts`).
 * **WCAG 2.1 AA Accessibility Audit**: Authored custom skip-to-content links (`SkipLink.tsx`), screen-reader-only data tables (`.sr-only` 30-day income breakdown for visual charts), 44x44px touch targets, and high-contrast outline focus rings (`*:focus-visible`).
 * **Animation Physics & Mobile Guardrails**: Tuned Framer Motion spring physics (`stiffness: 300`, `damping: 25`, 0.8s duration) and guarded desktop 3D/parallax effects to respect `@media (prefers-reduced-motion: reduce)`.
@@ -44,11 +45,12 @@ I utilized **Antigravity AI** to accelerate boilerplate creation, initial Tailwi
 
 ---
 
-## 💎 Bonus: 6 Premium Engineering Features Added
+## 💎 Bonus: 7 Premium Engineering Features Added
 
-1. **Scroll-Triggered Animated Counters (`useCounterAnimation.ts` / `AnimatedCounter.tsx`)**: Intersection Observer counter (`0` → `10K+`) blending seamlessly into headlines.
-2. **Mobile Touch Swipe Gestures (`EarningScenarios.tsx`)**: Framer Motion `drag="x"` distance-based swipe gestures (>50px threshold) with haptic feedback for touch devices.
-3. **Konami Code Easter Egg (`useKonamiCode.ts`)**: Typing `↑ ↑ ↓ ↓ ← → ← → B A` opens a full-screen celebratory modal (`EasterEgg.tsx`) with auto-close and silent page refresh.
-4. **Scroll-Linked Animations (`ScrollProgressBar.tsx`)**: Desktop parallax mesh backgrounds (0.5x speed), section entrance reveals, and top spring progress bar.
-5. **WCAG 2.1 AA Compliance (`ACCESSIBILITY_CHECKLIST.md`)**: Full keyboard navigation, screen reader accessibility tables, and aria live regions.
-6. **Lighthouse 90+ Score (`PERFORMANCE_GUIDE.md`)**: Zero-CLS font preloading, AVIF/WebP image formats, and dead code elimination.
+1. **Interactive Earnings Calculator (`useEarningsCalculator.ts` / `EarningsCalculator.tsx`)**: 50/50 desktop split projection tool with platform presets, live validation, benchmark indicators, and `localStorage` state persistence.
+2. **Scroll-Triggered Animated Counters (`useCounterAnimation.ts` / `AnimatedCounter.tsx`)**: Intersection Observer counter (`0` → `10K+`) blending seamlessly into headlines.
+3. **Mobile Touch Swipe Gestures (`EarningScenarios.tsx`)**: Framer Motion `drag="x"` distance-based swipe gestures (>50px threshold) with haptic feedback for touch devices.
+4. **Konami Code Easter Egg (`useKonamiCode.ts`)**: Typing `↑ ↑ ↓ ↓ ← → ← → B A` opens a full-screen celebratory modal (`EasterEgg.tsx`) with auto-close and silent page refresh.
+5. **Scroll-Linked Animations (`ScrollProgressBar.tsx`)**: Desktop parallax mesh backgrounds (0.5x speed), section entrance reveals, and top spring progress bar.
+6. **WCAG 2.1 AA Compliance (`ACCESSIBILITY_CHECKLIST.md`)**: Full keyboard navigation, screen reader accessibility tables, and aria live regions.
+7. **Lighthouse 90+ Score (`PERFORMANCE_GUIDE.md`)**: Zero-CLS font preloading, AVIF/WebP image formats, and dead code elimination.
