@@ -43,3 +43,4 @@ EarningsHub is engineered for 100% WCAG 2.1 AA accessibility standards.
    - Enable VoiceOver (macOS: `Cmd + F5`) or NVDA (Windows) to verify landmark announcements and input field labels.
 3. **Lighthouse Audit**:
    - Open Chrome DevTools -> Lighthouse -> Check **Accessibility** -> Run Audit (Target: 95-100).
+

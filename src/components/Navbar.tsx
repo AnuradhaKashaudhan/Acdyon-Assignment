@@ -18,9 +18,9 @@ export default function Navbar() {
   });
 
   const navLinks = [
-    { name: 'Features', href: '#features' },
     { name: 'Dashboard', href: '#dashboard' },
     { name: 'Growth Chart', href: '#chart' },
+    { name: 'Features', href: '#features' },
     { name: 'Scenarios', href: '#scenarios' },
   ];
 
