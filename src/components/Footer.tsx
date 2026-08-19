@@ -40,6 +40,9 @@ export default function Footer() {
           <p className="mt-1 flex items-center justify-center md:justify-end gap-1">
             Built with <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500 inline" /> for the gig economy.
           </p>
+          <p className="text-xs text-gray-500 dark:text-slate-400 mt-2 opacity-70">
+            (Psst... try the arrow keys! ↑↑↓↓←→←→BA 👀)
+          </p>
         </div>
       </div>
     </footer>

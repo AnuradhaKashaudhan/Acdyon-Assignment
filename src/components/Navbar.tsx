@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import { useTheme } from '../context/ThemeContext';
 import { Sun, Moon, TrendingUp, Menu, X } from 'lucide-react';
+import KeyboardShortcuts from './KeyboardShortcuts';
 
 export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
@@ -89,6 +90,9 @@ export default function Navbar() {
               )}
             </motion.div>
           </button>
+
+          {/* Keyboard Shortcuts Help Button */}
+          <KeyboardShortcuts />
 
           <a
             href="#cta"
