@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Truck, Laptop, Car, Wrench, Video, ArrowRightLeft, Sparkles, CheckCircle2, Touchpad } from 'lucide-react';
+import { Truck, Laptop, Car, Wrench, Video, Sparkles, CheckCircle2 } from 'lucide-react';
 
 export default function EarningScenarios() {
   const [flippedCards, setFlippedCards] = useState<Record<number, boolean>>({});
@@ -53,6 +53,8 @@ export default function EarningScenarios() {
       icon: Truck,
       color: 'from-orange-500 to-amber-600',
       badge: 'Swiggy / Zomato',
+      predictability: 94,
+      bars: [50, 75, 40, 90, 65],
       backTitle: 'Delivery Shift Insights',
       stats: [
         { label: 'Top Platforms', val: 'Zomato, Swiggy, Dunzo' },
@@ -67,6 +69,8 @@ export default function EarningScenarios() {
       icon: Laptop,
       color: 'from-blue-500 to-cyan-600',
       badge: 'Upwork / Fiverr',
+      predictability: 98,
+      bars: [60, 85, 95, 70, 80],
       backTitle: 'Freelance Growth Metrics',
       stats: [
         { label: 'Top Services', val: 'UI Design, Copywriting' },
@@ -81,6 +85,8 @@ export default function EarningScenarios() {
       icon: Car,
       color: 'from-emerald-500 to-teal-600',
       badge: 'Uber / Rapido',
+      predictability: 91,
+      bars: [45, 60, 80, 50, 70],
       backTitle: 'Ride-Share Breakdown',
       stats: [
         { label: 'High Demand Days', val: 'Fri - Sun (Airport & Office)' },
@@ -95,6 +101,8 @@ export default function EarningScenarios() {
       icon: Wrench,
       color: 'from-purple-500 to-indigo-600',
       badge: 'Urban Company',
+      predictability: 88,
+      bars: [55, 70, 45, 65, 85],
       backTitle: 'Home Services Stats',
       stats: [
         { label: 'Top Category', val: 'AC Repair & Electrical' },
@@ -109,6 +117,8 @@ export default function EarningScenarios() {
       icon: Video,
       color: 'from-rose-500 to-pink-600',
       badge: 'YouTube / Reels',
+      predictability: 96,
+      bars: [70, 50, 90, 60, 100],
       backTitle: 'Monetization Stats',
       stats: [
         { label: 'Revenue Sources', val: 'AdSense, Brand Deals, Tips' },
@@ -121,17 +131,6 @@ export default function EarningScenarios() {
   return (
     <section id="scenarios" aria-label="Earning Scenarios by Role" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <div className="text-center max-w-3xl mx-auto mb-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 mb-2 border border-emerald-500/20 bg-emerald-500/10"
-        >
-          <Touchpad className="w-4 h-4" aria-hidden="true" />
-          Swipe Left/Right or Hover To Flip 🔄
-        </motion.div>
-
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -170,7 +169,7 @@ export default function EarningScenarios() {
               onMouseLeave={() => handleMouseLeave(i)}
               tabIndex={0}
               role="button"
-              aria-label={`${item.role} details card. Swipe left or click to flip.`}
+              aria-label={`${item.role} details card.`}
               onKeyDown={(e) => {
                 if (e.key === 'Enter' || e.key === ' ') {
                   e.preventDefault();
@@ -200,29 +199,71 @@ export default function EarningScenarios() {
                   }`}
                 >
                   <div>
-                    <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center justify-between mb-3">
                       <div
-                        className={`w-12 h-12 rounded-2xl bg-gradient-to-tr ${item.color} text-white flex items-center justify-center shadow-md`}
+                        className={`w-11 h-11 rounded-2xl bg-gradient-to-tr ${item.color} text-white flex items-center justify-center shadow-md`}
                       >
-                        <item.icon className="w-6 h-6" aria-hidden="true" />
+                        <item.icon className="w-5 h-5" aria-hidden="true" />
                       </div>
                       <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
                         {item.badge}
                       </span>
                     </div>
 
-                    <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">{item.role}</h3>
+                    <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-1">{item.role}</h3>
                     <div className="text-2xl font-black text-emerald-600 dark:text-emerald-400 mb-2">
                       {item.income}
                     </div>
-                    <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-xl">
+                    <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-xl">
                       {item.hours}
                     </div>
                   </div>
 
-                  <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-bold text-blue-600 dark:text-blue-400">
-                    <span>Swipe or click to flip 3D</span>
-                    <ArrowRightLeft className="w-4 h-4" aria-hidden="true" />
+                  {/* Bottom Animated Performance Section */}
+                  <div className="pt-3 border-t border-slate-100 dark:border-slate-800/80">
+                    <div className="mb-3">
+                      <div className="flex justify-between items-center text-[11px] font-semibold text-slate-500 dark:text-slate-400 mb-1.5">
+                        <span>Predictability Score</span>
+                        <span className="font-bold text-slate-900 dark:text-slate-100">{item.predictability}%</span>
+                      </div>
+                      <div className="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                        <motion.div
+                          initial={{ width: 0 }}
+                          whileInView={{ width: `${item.predictability}%` }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 1, delay: 0.3, ease: 'easeOut' }}
+                          className={`h-full bg-gradient-to-r ${item.color} rounded-full`}
+                        />
+                      </div>
+                    </div>
+
+                    <div className="flex items-center justify-between pt-1">
+                      <div className="flex items-center gap-2">
+                        <span className="relative flex h-2 w-2">
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                          <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                        </span>
+                        <span className="text-[11px] font-medium text-slate-500 dark:text-slate-400">Live Sync</span>
+                      </div>
+
+                      {/* Mini Bar Chart Animations */}
+                      <div className="flex items-end gap-1 h-5">
+                        {item.bars.map((height, bIdx) => (
+                          <motion.div
+                            key={bIdx}
+                            animate={{ scaleY: [0.6, 1.1, 0.6] }}
+                            transition={{
+                              duration: 1.5 + bIdx * 0.2,
+                              repeat: Infinity,
+                              repeatType: 'reverse',
+                              ease: 'easeInOut',
+                            }}
+                            className={`w-1 rounded-full bg-gradient-to-t ${item.color}`}
+                            style={{ height: `${height}%` }}
+                          />
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </motion.div>
 
